@@ -1,0 +1,100 @@
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} 
+
+.jogoBorda{
+    border: 5px solid black;
+    width: 100%;
+    height: 500px; 
+    margin: 0 auto ;
+    position: relative; 
+    overflow: hidden;
+    background-image: url("./imagens/fundo.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    animation: fundo 5s infinite linear;
+
+}
+
+.mumia{
+    position: absolute;
+    bottom: -3px;
+    width: 80px;
+}
+
+.pulo{
+    animation: pulo 400ms ease-out ;
+}
+
+.movimento{
+    position: absolute;
+    bottom: 0; 
+    width: 70px;
+    animation: inimigoAnimacao 4s infinite linear;
+}
+
+.aviao01{
+    position: absolute;
+    width: 250px;
+    animation: aviao 5s infinite linear;
+}
+
+@keyframes aviao {
+    from {
+        right: -250px;
+    }
+
+    to {
+        right: 100%;
+    }
+}
+
+@keyframes fundo{
+    from{
+        transform: translateZ(-100%);
+    }
+
+    to{
+        transform: translateZ(0);
+    }
+}
+
+@keyframes inimigoAnimacao {
+    from{
+        right: -80px;
+    }
+
+    to{
+        right: 100%;
+    }
+}
+
+@keyframes pulo{
+    0%{
+        bottom: 0;
+    }
+
+    40%{
+        bottom: 150px;
+    }
+
+    50%{
+        bottom: 150px;
+    }
+
+    55%{
+        bottom: 150px;
+    }
+    
+    65%{
+        bottom: 150px;
+    }
+
+    100%{
+        bottom: 0;
+    }
+}
+
